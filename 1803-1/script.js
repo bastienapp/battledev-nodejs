@@ -19,10 +19,7 @@ console.log = function (result) {
 };
 
 const input = fs.readFileSync(inputFile, 'utf8').toString().split('\n');
-/*
-Sortie
-Un entier représentant le score du meilleur restaurant de votre base arrondi à l'entier supérieur.
-*/
+
 function ContestResponse() {
   //implement your code here using input array
 }
