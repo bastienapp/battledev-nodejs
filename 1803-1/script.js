@@ -10,7 +10,7 @@ if (process.argv.length > 2) {
   outputFile = 'output' + process.argv[2] + '.txt';
 }
 console.log = function (result) {
-  const expected = fs.readFileSync(outputFile);
+  const expected = fs.readFileSync(outputFile, 'utf8');
   assert.deepStrictEqual(
     result.toString().split('\n'),
     expected.toString().split('\n')
@@ -18,8 +18,11 @@ console.log = function (result) {
   console.error('OK ' + result);
 };
 
-const input = fs.readFileSync(inputFile).toString().split('\n');
-
+const input = fs.readFileSync(inputFile, 'utf8').toString().split('\n');
+/*
+Sortie
+Un entier représentant le score du meilleur restaurant de votre base arrondi à l'entier supérieur.
+*/
 function ContestResponse() {
   //implement your code here using input array
 }
