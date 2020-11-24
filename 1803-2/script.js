@@ -10,8 +10,12 @@ if (process.argv.length > 2) {
   outputFile = 'output' + process.argv[2] + '.txt';
 }
 console.log = function (result) {
-  const expected = fs.readFileSync(outputFile).toString().split('\n');
-  assert.deepStrictEqual(result, expected);
+  const expected = fs.readFileSync(outputFile);
+  assert.deepStrictEqual(
+    result.toString().split('\n'),
+    expected.toString().split('\n')
+  );
+  console.error('OK ' + result);
 };
 
 const input = fs.readFileSync(inputFile).toString().split('\n');
