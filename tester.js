@@ -17,6 +17,14 @@ if (process.argv.length > 2) {
   );
   return;
 }
+console.log = function (result) {
+  const expected = fs.readFileSync(outputFile, 'utf8');
+  assert.deepStrictEqual(
+    result.toString().split('\n'),
+    expected.toString().split('\n')
+  );
+  console.error('OK ' + result);
+};
 
 const readline_object = fs
   .readFileSync(inputFile, 'utf8')
