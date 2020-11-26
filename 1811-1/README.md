@@ -1,15 +1,22 @@
 Énoncé
 
-Finalement, pour créer sa société, il n'est pas nécessaire d'avoir une idée. On peut prendre une idée qui marche déjà et refaire la même chose. Ensuite, il suffit d'acheter des clics et d'avoir un e-marketing performant. Vous voyez donc les choses en grand : vous allez clôner ebay car faire un site d'enchères ce n'est pas bien compliqué. On reçoit des enchères, on vérifie qu'elles sont strictement supérieures au prix de réserve et on détermine le nom du gagnant à la fin.
+Un de vos amis joue dans une équipe de Rugby. Il est lanceur lors des touches. Lors d'une touche le lanceur doit communiquer aux autres joueurs à quelle hauteur il va envoyer le ballon à l'aide d'un code que les adversaires ne doivent pas pouvoir décoder. Pour chaque hauteur, il y a plusieurs codes. Le lanceur crie alors plusieurs mots dont un seul correspond à un code et toute l'équipe peut ainsi déterminer la hauteur choisie.
+
+Votre ami vous présente une liste de mots que les joueurs ont proposé (un mot peut donc figurer plusieurs fois dans sa liste) et vous demande de trouver une méthode pour en extraire des mots "magiques" qui seront utilisés comme code. Il leur associera des hauteurs ensuite. Vous avez décidé qu'un mot magique aurait les caractéristiques suivantes :
+
+- Il doit contenir entre 5 et 7 lettres.
+- Il doit commencer par deux lettres de l'alphabet qui se suivent dans l'ordre alphabétique.
+- Il doit se terminer par une voyelle (a, e, i, o, u, ou y).
+
+Vous devez déterminer combien de mots magiques différents figurent dans sa liste.
 
 Format des données
 
 Entrée
 
-Ligne 1 : un entier N compris entre 2 et 1 000 correspondant au nombre d'enchères reçues.
-Ligne 2 : un entier compris entre 1 et 500 correspondant au prix de réserve de l'objet.
-Lignes 3 à N+2 : un entier P compris entre 1 et 10 000 et une chaîne de caractères E séparés par un espace où P correspond au prix de l'enchère et E correspond au prénom de l’enchérisseur.
+Ligne 1 : un entier N compris entre 10 et 1000 correspondant au nombre de mots dans la liste.
+Ligne 2 à N+1 : une chaîne de caractères contenant entre 2 et 20 caractères en minuscule correspondant à un mot.
 
 Sortie
 
-Une chaîne de caractères correspondant au prénom de vainqueur. Si personne ne remporte l'enchère (car toutes les offres sont inférieures ou égales au prix de réserve), renvoyez KO. On vous garantit que s'il y a un vainqueur, alors il n'y en a qu'un seul.
+Un entier correspondant au nombre de mots magiques différents contenus dans la liste.
