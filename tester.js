@@ -23,7 +23,7 @@ console.log = function (result) {
     result.toString().split('\n'),
     expected.toString().split('\n')
   );
-  console.error('OK ' + result);
+  console.error('OK', result);
 };
 
 const readline_object = fs
